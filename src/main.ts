@@ -13,7 +13,7 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true, // 只有定义在 DTO 里的属性才显示
-      // forbidNonWhitelisted: true, // 如果出现DTO 定义外的属性，则拦截请求
+      forbidNonWhitelisted: true, // 如果出现DTO 定义外的属性，则拦截请求
     }),
   );
   await app.listen(3000);
